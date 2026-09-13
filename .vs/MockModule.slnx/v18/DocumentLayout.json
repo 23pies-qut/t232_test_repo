@@ -1,0 +1,45 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\23pie\\Documents\\2026 Sem 2\\IFB398 - IT Capstone\\MockModule\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7C8CF597-3177-9AA9-BB72-94DC26A28BAD}|mockmodule.client\\mockmodule.client.esproj|c:\\users\\23pie\\documents\\2026 sem 2\\ifb398 - it capstone\\mockmodule\\mockmodule.client\\module.manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7C8CF597-3177-9AA9-BB72-94DC26A28BAD}|mockmodule.client\\mockmodule.client.esproj|solutionrelative:mockmodule.client\\module.manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 42,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "module.manifest.json",
+              "DocumentMoniker": "C:\\Users\\23pie\\Documents\\2026 Sem 2\\IFB398 - IT Capstone\\MockModule\\mockmodule.client\\module.manifest.json",
+              "RelativeDocumentMoniker": "mockmodule.client\\module.manifest.json",
+              "ToolTip": "C:\\Users\\23pie\\Documents\\2026 Sem 2\\IFB398 - IT Capstone\\MockModule\\mockmodule.client\\module.manifest.json",
+              "RelativeToolTip": "mockmodule.client\\module.manifest.json",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-11T00:41:39.191Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
