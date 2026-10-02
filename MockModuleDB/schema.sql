@@ -48,7 +48,6 @@ CREATE TABLE files  (
     size_bytes  BIGINT          NOT NULL,
     storage_key VARCHAR(1024)   NOT NULL,
     status      VARCHAR(20)     NOT NULL,
-    checksum    VARCHAR(128),
     created_at  DATETIME2       NOT NULL,
     updated_at  DATETIME2       NOT NULL,
     deleted_at  DATETIME2,
@@ -70,7 +69,6 @@ CREATE TABLE file_contents (
     nonce               VARBINARY(16)  	NOT NULL,
     auth_tag            VARBINARY(16)  	NOT NULL,
     wrapped_dek         VARBINARY(512) 	NOT NULL,
-    key_version         INT            	NOT NULL,
     plaintext_checksum  VARCHAR(128)   	NOT NULL,
 
     CONSTRAINT pk_file_contents PRIMARY KEY (file_id),
@@ -185,7 +183,6 @@ CREATE OR ALTER PROCEDURE dbo.files_Content_Put
     @Nonce       VARBINARY(16),
     @AuthTag     VARBINARY(16),
     @WrappedDek  VARBINARY(512),
-    @KeyVersion  INT,
     @Checksum    VARCHAR(128)
 AS
 BEGIN
@@ -198,8 +195,8 @@ BEGIN
     IF NOT EXISTS (SELECT 1 FROM dbo.files WHERE id = @FileID AND tenant_id = @TenantID)
         THROW 50003, 'FILES_NOT_FOUND', 1;
 
-    INSERT dbo.file_contents (file_id, tenant_id, ciphertext, nonce, auth_tag, wrapped_dek, key_version, plaintext_checksum)
-    VALUES (@FileID, @TenantID, @Ciphertext, @Nonce, @AuthTag, @WrappedDek, @KeyVersion, @Checksum);
+    INSERT dbo.file_contents (file_id, tenant_id, ciphertext, nonce, auth_tag, wrapped_dek, plaintext_checksum)
+    VALUES (@FileID, @TenantID, @Ciphertext, @Nonce, @AuthTag, @WrappedDek, @Checksum);
 
     UPDATE dbo.files SET status = 'UPLOADED', updated_at = SYSUTCDATETIME() WHERE id = @FileID;
 END
@@ -219,7 +216,7 @@ BEGIN
     IF @TenantID IS NULL
         THROW 50001, 'FILES_CONTEXT_REQUIRED', 1;
 
-    SELECT fc.ciphertext, fc.nonce, fc.auth_tag, fc.wrapped_dek, fc.key_version, fc.plaintext_checksum, f.filename
+    SELECT fc.ciphertext, fc.nonce, fc.auth_tag, fc.wrapped_dek, fc.plaintext_checksum, f.filename
     FROM dbo.file_contents fc
     JOIN dbo.files f ON f.id = fc.file_id
     WHERE fc.file_id = @FileID
@@ -249,10 +246,10 @@ INSERT INTO tenant_memberships (id, user_id, tenant_id, joined_at) VALUES
 EXEC sys.sp_set_session_context N'TenantID', '00000000000000000000000000000001';
 INSERT INTO files (id, tenant_id, owner_id, filename, mime_type, size_bytes, storage_key, status, created_at, updated_at) VALUES
 ('00000000000000000000000000000005', '00000000000000000000000000000001', '00000000000000000000000000000001', 'andy.txt', 'text/plain', 13, '00000000000000000000000000000005', 'UPLOADED', SYSUTCDATETIME(), SYSUTCDATETIME());
-INSERT INTO file_contents (file_id, tenant_id, ciphertext, nonce, auth_tag, wrapped_dek, key_version, plaintext_checksum) VALUES
-('00000000000000000000000000000005', '00000000000000000000000000000001', 0x1234, 0x00000000000000000000000000000000, 0x00000000000000000000000000000000, 0x00, 1, 'dummy-checksum-a');
+INSERT INTO file_contents (file_id, tenant_id, ciphertext, nonce, auth_tag, wrapped_dek, plaintext_checksum) VALUES
+('00000000000000000000000000000005', '00000000000000000000000000000001', 0x1234, 0x00000000000000000000000000000000, 0x00000000000000000000000000000000, 0x00,  'dummy-checksum-a');
 EXEC sys.sp_set_session_context N'TenantID', '00000000000000000000000000000002';
 INSERT INTO files (id, tenant_id, owner_id, filename, mime_type, size_bytes, storage_key, status, created_at, updated_at) VALUES
 ('00000000000000000000000000000006', '00000000000000000000000000000002', '00000000000000000000000000000002', 'bobs-bananas.txt', 'text/plain', 9, '00000000000000000000000000000006', 'UPLOADED', SYSUTCDATETIME(), SYSUTCDATETIME());
-INSERT INTO file_contents (file_id, tenant_id, ciphertext, nonce, auth_tag, wrapped_dek, key_version, plaintext_checksum) VALUES
-('00000000000000000000000000000006', '00000000000000000000000000000002', 0x5678, 0x00000000000000000000000000000000, 0x00000000000000000000000000000000, 0x00, 1, 'dummy-checksum-b');
+INSERT INTO file_contents (file_id, tenant_id, ciphertext, nonce, auth_tag, wrapped_dek, plaintext_checksum) VALUES
+('00000000000000000000000000000006', '00000000000000000000000000000002', 0x5678, 0x00000000000000000000000000000000, 0x00000000000000000000000000000000, 0x00, 'dummy-checksum-b');

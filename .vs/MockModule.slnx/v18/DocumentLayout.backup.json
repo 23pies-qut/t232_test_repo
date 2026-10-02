@@ -40,11 +40,19 @@
               "RelativeDocumentMoniker": "mockmodule.client\\src\\App.jsx",
               "ToolTip": "C:\\Users\\23pie\\Documents\\2026 Sem 2\\IFB398 - IT Capstone\\t232_test_repo\\mockmodule.client\\src\\App.jsx",
               "RelativeToolTip": "mockmodule.client\\src\\App.jsx",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwCIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
               "WhenOpened": "2026-09-25T05:48:58.923Z",
               "IsPinned": true,
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
@@ -67,7 +75,7 @@
               "RelativeDocumentMoniker": "MockModule.Server\\Controllers\\UserContextController.cs",
               "ToolTip": "C:\\Users\\23pie\\Documents\\2026 Sem 2\\IFB398 - IT Capstone\\t232_test_repo\\MockModule.Server\\Controllers\\UserContextController.cs",
               "RelativeToolTip": "MockModule.Server\\Controllers\\UserContextController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA1wAkAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-01T02:58:29.855Z",
               "EditorCaption": ""
@@ -97,14 +105,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
               "WhenOpened": "2026-10-01T01:57:04.034Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             }
           ]
         }

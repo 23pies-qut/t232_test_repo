@@ -40,7 +40,7 @@
               "RelativeDocumentMoniker": "mockmodule.client\\src\\App.jsx",
               "ToolTip": "C:\\Users\\23pie\\Documents\\2026 Sem 2\\IFB398 - IT Capstone\\t232_test_repo\\mockmodule.client\\src\\App.jsx",
               "RelativeToolTip": "mockmodule.client\\src\\App.jsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAQwC0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
               "WhenOpened": "2026-09-25T05:48:58.923Z",
               "IsPinned": true,
@@ -64,8 +64,7 @@
               "RelativeToolTip": "MockModule.Server\\Controllers\\FilesController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-01T02:58:50.87Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-01T02:58:50.87Z"
             },
             {
               "$type": "Document",
@@ -77,8 +76,7 @@
               "RelativeToolTip": "MockModule.Server\\Controllers\\UserContextController.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAA1wAkAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-01T02:58:29.855Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-01T02:58:29.855Z"
             },
             {
               "$type": "Document",
@@ -90,8 +88,7 @@
               "RelativeToolTip": "MockModule.Server\\Controllers\\GreetingController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-01T02:11:40.789Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-01T02:11:40.789Z"
             },
             {
               "$type": "Document",
@@ -103,8 +100,7 @@
               "RelativeToolTip": "mockmodule.client\\src\\api\\userContextApi.jsx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-10-01T01:57:04.034Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-01T01:57:04.034Z"
             }
           ]
         }
