@@ -1,51 +1,74 @@
-﻿import { useEffect, useState } from 'react';
+﻿import { useState } from 'react';
+import { setUserContext } from './api/userContextApi';
+
 import './App.css';
 
+
 function App() {
-    const [forecasts, setForecasts] = useState();
+    const [currentUser, setCurrentUser] = useState(null);
+    const [selectedFile, setSelectedFile] = useState(null);
+    const [token, setToken] = useState(null);
 
-    useEffect(() => {
-        populateWeatherData();
-    }, []);
+    const onFileChange = (event) => {
+        setSelectedFile(event.target.files[0]);
+    };
 
-    const contents = forecasts === undefined
-        ? <p><em>Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationreact">https://aka.ms/jspsintegrationreact</a> for more details.</em></p>
-        : <table className="table table-striped" aria-labelledby="tableLabel">
-            <thead>
-                <tr>
-                    <th>Date</th>
-                    <th>Temp. (C)</th>
-                    <th>Temp. (F)</th>
-                    <th>Summary</th>
-                </tr>
-            </thead>
-            <tbody>
-                {forecasts.map(forecast =>
-                    <tr key={forecast.date}>
-                        <td>{forecast.date}</td>
-                        <td>{forecast.temperatureC}</td>
-                        <td>{forecast.temperatureF}</td>
-                        <td>{forecast.summary}</td>
-                    </tr>
-                )}
-            </tbody>
-        </table>;
+    const setUser = async(user) => {
+        const { token } = await setUserContext(user);
+        setCurrentUser(user);
+        setToken(token);
+    };
+
+    const switchUser = async () => {
+        const nextUser = currentUser === 'Andy' ? 'Bob' : 'Andy';
+        setUser(nextUser);
+    };
 
     return (
-        <div>
-            <h1 id="tableLabel">Weather forecast</h1>
-            <p>This component demonstrates fetching data from the server.</p>
-            {contents}
-        </div>
+        <>
+            <h1>Mock Module</h1>
+            {currentUser === null ? (
+                <div>
+                    <p>Select a user:</p>
+                    <button onClick={() => setUser('Andy')}>Andy</button>
+                    <button onClick={() => setUser('Bob')}>Bob</button>
+
+                </div>
+            ) : (
+                <div>
+                        <p>Is logged in: {currentUser}.</p>
+                        <br />
+
+                        <button onClick={() => switchUser()}>
+                            Switch User
+                        </button>
+                        <br />
+
+                        <p>Token = {token}</p>
+
+                        <input type="file" onChange={onFileChange} />
+                        <br />
+
+                        {selectedFile ? (
+                            <div>
+                                <h2>File Details:</h2>
+                                <p>Name: {selectedFile.name}</p>
+                                <p>Type: {selectedFile.type}</p>
+                                <p>Size: {selectedFile.size}bytes</p>
+                                <button onClick={null /*TODO: Upload to db*/} >Upload!</button>
+                            </div>
+                        ) : (
+                            <p>No file selected.</p>
+                        )}
+                        <br />
+
+                        <div>
+                            <h2>{currentUser}'s Files:</h2>
+                        </div>
+                </div>
+            )}
+        </>
     );
-    
-    async function populateWeatherData() {
-        const response = await fetch('weatherforecast');
-        if (response.ok) {
-            const data = await response.json();
-            setForecasts(data);
-        }
-    }
-}
+};
 
 export default App;

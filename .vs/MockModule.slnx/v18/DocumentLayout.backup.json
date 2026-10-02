@@ -1,10 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\23pie\\Documents\\2026 Sem 2\\IFB398 - IT Capstone\\MockModule\\",
+  "WorkspaceRootPath": "C:\\Users\\23pie\\Documents\\2026 Sem 2\\IFB398 - IT Capstone\\t232_test_repo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7C8CF597-3177-9AA9-BB72-94DC26A28BAD}|mockmodule.client\\mockmodule.client.esproj|c:\\users\\23pie\\documents\\2026 sem 2\\ifb398 - it capstone\\mockmodule\\mockmodule.client\\module.manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{7C8CF597-3177-9AA9-BB72-94DC26A28BAD}|mockmodule.client\\mockmodule.client.esproj|solutionrelative:mockmodule.client\\module.manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{7C8CF597-3177-9AA9-BB72-94DC26A28BAD}|mockmodule.client\\mockmodule.client.esproj|c:\\users\\23pie\\documents\\2026 sem 2\\ifb398 - it capstone\\t232_test_repo\\mockmodule.client\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{7C8CF597-3177-9AA9-BB72-94DC26A28BAD}|mockmodule.client\\mockmodule.client.esproj|solutionrelative:mockmodule.client\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C8CF597-3177-9AA9-BB72-94DC26A28BAD}|mockmodule.client\\mockmodule.client.esproj|c:\\users\\23pie\\documents\\2026 sem 2\\ifb398 - it capstone\\t232_test_repo\\mockmodule.client\\src\\api\\usercontextapi.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{7C8CF597-3177-9AA9-BB72-94DC26A28BAD}|mockmodule.client\\mockmodule.client.esproj|solutionrelative:mockmodule.client\\src\\api\\usercontextapi.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FD79660-694D-A5DE-CF86-8B3B1B62789F}|MockModule.Server\\MockModule.Server.csproj|c:\\users\\23pie\\documents\\2026 sem 2\\ifb398 - it capstone\\t232_test_repo\\mockmodule.server\\controllers\\filescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FD79660-694D-A5DE-CF86-8B3B1B62789F}|MockModule.Server\\MockModule.Server.csproj|solutionrelative:mockmodule.server\\controllers\\filescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FD79660-694D-A5DE-CF86-8B3B1B62789F}|MockModule.Server\\MockModule.Server.csproj|c:\\users\\23pie\\documents\\2026 sem 2\\ifb398 - it capstone\\t232_test_repo\\mockmodule.server\\controllers\\greetingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FD79660-694D-A5DE-CF86-8B3B1B62789F}|MockModule.Server\\MockModule.Server.csproj|solutionrelative:mockmodule.server\\controllers\\greetingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6FD79660-694D-A5DE-CF86-8B3B1B62789F}|MockModule.Server\\MockModule.Server.csproj|c:\\users\\23pie\\documents\\2026 sem 2\\ifb398 - it capstone\\t232_test_repo\\mockmodule.server\\controllers\\usercontextcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6FD79660-694D-A5DE-CF86-8B3B1B62789F}|MockModule.Server\\MockModule.Server.csproj|solutionrelative:mockmodule.server\\controllers\\usercontextcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +30,74 @@
       "DocumentGroups": [
         {
           "DockedWidth": 42,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "App.jsx",
+              "DocumentMoniker": "C:\\Users\\23pie\\Documents\\2026 Sem 2\\IFB398 - IT Capstone\\t232_test_repo\\mockmodule.client\\src\\App.jsx",
+              "RelativeDocumentMoniker": "mockmodule.client\\src\\App.jsx",
+              "ToolTip": "C:\\Users\\23pie\\Documents\\2026 Sem 2\\IFB398 - IT Capstone\\t232_test_repo\\mockmodule.client\\src\\App.jsx",
+              "RelativeToolTip": "mockmodule.client\\src\\App.jsx",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-09-25T05:48:58.923Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FilesController.cs",
+              "DocumentMoniker": "C:\\Users\\23pie\\Documents\\2026 Sem 2\\IFB398 - IT Capstone\\t232_test_repo\\MockModule.Server\\Controllers\\FilesController.cs",
+              "RelativeDocumentMoniker": "MockModule.Server\\Controllers\\FilesController.cs",
+              "ToolTip": "C:\\Users\\23pie\\Documents\\2026 Sem 2\\IFB398 - IT Capstone\\t232_test_repo\\MockModule.Server\\Controllers\\FilesController.cs",
+              "RelativeToolTip": "MockModule.Server\\Controllers\\FilesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-01T02:58:50.87Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserContextController.cs",
+              "DocumentMoniker": "C:\\Users\\23pie\\Documents\\2026 Sem 2\\IFB398 - IT Capstone\\t232_test_repo\\MockModule.Server\\Controllers\\UserContextController.cs",
+              "RelativeDocumentMoniker": "MockModule.Server\\Controllers\\UserContextController.cs",
+              "ToolTip": "C:\\Users\\23pie\\Documents\\2026 Sem 2\\IFB398 - IT Capstone\\t232_test_repo\\MockModule.Server\\Controllers\\UserContextController.cs",
+              "RelativeToolTip": "MockModule.Server\\Controllers\\UserContextController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-01T02:58:29.855Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GreetingController.cs",
+              "DocumentMoniker": "C:\\Users\\23pie\\Documents\\2026 Sem 2\\IFB398 - IT Capstone\\t232_test_repo\\MockModule.Server\\Controllers\\GreetingController.cs",
+              "RelativeDocumentMoniker": "MockModule.Server\\Controllers\\GreetingController.cs",
+              "ToolTip": "C:\\Users\\23pie\\Documents\\2026 Sem 2\\IFB398 - IT Capstone\\t232_test_repo\\MockModule.Server\\Controllers\\GreetingController.cs",
+              "RelativeToolTip": "MockModule.Server\\Controllers\\GreetingController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-01T02:11:40.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "userContextApi.jsx",
+              "DocumentMoniker": "C:\\Users\\23pie\\Documents\\2026 Sem 2\\IFB398 - IT Capstone\\t232_test_repo\\mockmodule.client\\src\\api\\userContextApi.jsx",
+              "RelativeDocumentMoniker": "mockmodule.client\\src\\api\\userContextApi.jsx",
+              "ToolTip": "C:\\Users\\23pie\\Documents\\2026 Sem 2\\IFB398 - IT Capstone\\t232_test_repo\\mockmodule.client\\src\\api\\userContextApi.jsx",
+              "RelativeToolTip": "mockmodule.client\\src\\api\\userContextApi.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-10-01T01:57:04.034Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
@@ -23,19 +105,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "module.manifest.json",
-              "DocumentMoniker": "C:\\Users\\23pie\\Documents\\2026 Sem 2\\IFB398 - IT Capstone\\MockModule\\mockmodule.client\\module.manifest.json",
-              "RelativeDocumentMoniker": "mockmodule.client\\module.manifest.json",
-              "ToolTip": "C:\\Users\\23pie\\Documents\\2026 Sem 2\\IFB398 - IT Capstone\\MockModule\\mockmodule.client\\module.manifest.json",
-              "RelativeToolTip": "mockmodule.client\\module.manifest.json",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-09-11T00:41:39.191Z",
-              "EditorCaption": ""
             }
           ]
         }

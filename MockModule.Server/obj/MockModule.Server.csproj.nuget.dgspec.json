@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\23pie\\Documents\\2026 Sem 2\\IFB398 - IT Capstone\\MockModule\\MockModule.Server\\MockModule.Server.csproj": {}
+    "C:\\Users\\23pie\\Documents\\2026 Sem 2\\IFB398 - IT Capstone\\t232_test_repo\\MockModule.Server\\MockModule.Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\23pie\\Documents\\2026 Sem 2\\IFB398 - IT Capstone\\MockModule\\MockModule.Server\\MockModule.Server.csproj": {
+    "C:\\Users\\23pie\\Documents\\2026 Sem 2\\IFB398 - IT Capstone\\t232_test_repo\\MockModule.Server\\MockModule.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\23pie\\Documents\\2026 Sem 2\\IFB398 - IT Capstone\\MockModule\\MockModule.Server\\MockModule.Server.csproj",
+        "projectUniqueName": "C:\\Users\\23pie\\Documents\\2026 Sem 2\\IFB398 - IT Capstone\\t232_test_repo\\MockModule.Server\\MockModule.Server.csproj",
         "projectName": "MockModule.Server",
-        "projectPath": "C:\\Users\\23pie\\Documents\\2026 Sem 2\\IFB398 - IT Capstone\\MockModule\\MockModule.Server\\MockModule.Server.csproj",
+        "projectPath": "C:\\Users\\23pie\\Documents\\2026 Sem 2\\IFB398 - IT Capstone\\t232_test_repo\\MockModule.Server\\MockModule.Server.csproj",
         "packagesPath": "C:\\Users\\23pie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\23pie\\Documents\\2026 Sem 2\\IFB398 - IT Capstone\\MockModule\\MockModule.Server\\obj\\",
+        "outputPath": "C:\\Users\\23pie\\Documents\\2026 Sem 2\\IFB398 - IT Capstone\\t232_test_repo\\MockModule.Server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Users\\23pie\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder",
@@ -61,6 +61,10 @@
             "Microsoft.AspNetCore.SpaProxy": {
               "target": "Package",
               "version": "[10.*-*, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[7.1.1, )"
             }
           },
           "imports": [
