@@ -1,0 +1,38 @@
+/* Global styles. --tenant is the current tenant's colour (set via tenantColor()) and distinguishes tenants. */
+:root {
+  --accent: #2f6fed;
+  --ok: #16a34a;
+  --danger: #dc2626;
+  --border: #e3e6ea;
+  --muted: #667085;
+  --tenant: var(--accent);
+}
+
+body { margin: 0; font-family: system-ui, 'Segoe UI', 'Microsoft YaHei', sans-serif; background: #f4f6f8; color: #1a1a1a; }
+.page { max-width: 1000px; margin: 24px auto; padding: 24px; background: #fff; border-radius: 12px; border-top: 5px solid var(--tenant); }
+h1 { margin: 0; font-size: 1.5rem; }
+h2 { margin: 0; font-size: 1.05rem; }
+.muted { color: var(--muted); font-size: 0.88rem; }
+.center { text-align: center; }
+.card { border: 1px solid var(--border); border-radius: 10px; padding: 16px; margin: 16px 0; }
+.bar { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+.spacer { flex: 1; }
+.banner { padding: 10px 14px; border-radius: 8px; background: #fdecea; color: #7a1d14; }
+.msg.ok { color: var(--ok); }
+.msg.error { color: var(--danger); }
+
+button, select, input { font: inherit; }
+select { padding: 5px 8px; border: 1px solid #ccc; border-radius: 6px; }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+.link { background: none; border: none; color: var(--accent); cursor: pointer; padding: 2px 6px; }
+.link.danger { color: var(--danger); }
+
+/* ---- file table ----------------------------------------------------------------- */
+table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+th { text-align: left; color: var(--muted); font-weight: 500; border-bottom: 1px solid var(--border); padding: 6px; }
+td { border-bottom: 1px solid #f0f1f3; padding: 6px; }
+td.name { word-break: break-all; }
+td.actions { text-align: right; white-space: nowrap; }
+.status { font-size: 0.75rem; padding: 1px 8px; border-radius: 999px; background: #eef0f3; }
+.status.uploaded { background: #e9f7ee; color: var(--ok); }
+.status.pending { background: #fff6e0; color: #9a6700; }

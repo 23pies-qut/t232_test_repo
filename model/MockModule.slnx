@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="MockModule.Server/MockModule.Server.csproj" />
+  <Project Path="mockmodule.client/mockmodule.client.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+</Solution>

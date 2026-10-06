@@ -1,0 +1,10 @@
+/* Styles for App: header, user and tenant switching, login page, upload form. Global styles are in index.css. */
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+.who { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.tenants { display: flex; gap: 6px; flex-wrap: wrap; }
+.chip { --c: var(--accent); padding: 5px 12px; border-radius: 999px; border: 1.5px solid var(--c); background: #fff; color: var(--c); cursor: pointer; }
+.chip.on { background: var(--c); color: #fff; opacity: 1; }
+.pick { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #f0f1f3; flex-wrap: wrap; }
+.upload { display: flex; gap: 10px; align-items: center; }
+.upload input { flex: 1; }
+.upload button { padding: 8px 16px; border: none; border-radius: 6px; background: var(--tenant); color: #fff; cursor: pointer; }

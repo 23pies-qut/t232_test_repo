@@ -1,0 +1,6 @@
+@MockModule.Server_HostAddress = http://localhost:5098
+
+GET {{MockModule.Server_HostAddress}}/api/Health
+Accept: application/json
+
+###
