@@ -105,3 +105,4 @@ C:\Users\23pie\Documents\2026 Sem 2\IFB398 - IT Capstone\t232_test_repo\MockModu
 C:\Users\23pie\Documents\2026 Sem 2\IFB398 - IT Capstone\t232_test_repo\MockModule.Server\bin\Debug\net10.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\23pie\Documents\2026 Sem 2\IFB398 - IT Capstone\t232_test_repo\MockModule.Server\bin\Debug\net10.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\23pie\Documents\2026 Sem 2\IFB398 - IT Capstone\t232_test_repo\MockModule.Server\bin\Debug\net10.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\23pie\Documents\2026 Sem 2\IFB398 - IT Capstone\t232_test_repo\MockModule.Server\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

@@ -5,7 +5,7 @@ namespace MockModule.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class FilesController : ControllerBase
+    public class GetFilesListController : ControllerBase
     {
     }
 }

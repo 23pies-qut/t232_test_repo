@@ -8,10 +8,10 @@ builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 builder.Services.AddScoped<TokenService>();
+builder.Services.AddScoped<ScopeReaderService>();
 
 var connectionString = builder.Configuration.GetConnectionString("MockModuleData")
     ?? throw new InvalidOperationException("MockModuleDB connection required.");
-
 
 var app = builder.Build();
 

@@ -2,16 +2,13 @@
 
 This script builds a **multi-tenant encrypted file storage** database in SQL Server. Multiple tenants (organizations) share one database, and **Row-Level Security (RLS)** ensures each tenant can only see its own files.
 
-In the real system, users, tenants and memberships are owned by other microservices and thus in this file they are for testing only. files and file_contents will be the only tables that belong to this service and are protected by a crude RLS. 
+In the real system, users, tenants and memberships are owned by other microservices and thus in this file they are for testing only. The tables 'files' and 'file_contents' will be the only tables that belong to this service and are protected by a crude RLS. 
 
-
-## How the pieces fit together
-
-A file belongs to one tenant and is owned by one user, both are referenced by ID only. The files encrypted content lives in a separate table for security and so metadata remains independently queryable.
+A file belongs to one tenant and is owned by one user, both are referenced by an ID number. The files encrypted content lives in a separate table for security and so metadata remains independently queryable.
 
 ## Tables
 
-Tables 'users', 'tenants' and 'tenant_memberships' exist only so we can test locally. They will be removed and replaced by calls to the user and tenant services in prod.
+Tables 'users', 'tenants' and 'tenant_memberships' exist only so we can test locally without the greater cobbled platform context. They will be removed and replaced by calls to the user and tenant services in prod.
 
 
 ### files
@@ -140,3 +137,4 @@ To verify RLS works, set the session to one tenant and select:
 EXEC sys.sp_set_session_context N'TenantID', '00000000000000000000000000000001';
 SELECT * FROM files;
 ```
+

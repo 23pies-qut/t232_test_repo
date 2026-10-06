@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿// https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-10.0&tabs=visual-studio
+
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MockModule.Server.Services;
 
@@ -38,7 +40,7 @@ namespace MockModule.Server.Controllers
             if (!TestUsers.TryGetValue(request.UserName, out var user))
                 return BadRequest(new { code = "MOCKMODULE_USER_UNKNOWN" });
 
-            var permissions = new[] { "files.read", "files.upload" };
+            var permissions = new[] { "files.read", "files.write" };
             var token = _tokenService.CreateToken(user.TenantId, user.MemberId, permissions, duration: 2);
 
             return Ok(new { token });

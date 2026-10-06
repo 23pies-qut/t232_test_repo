@@ -1,9 +1,13 @@
+CREATE DATABASE MockModuleDB;
+GO
+USE MockModuleDB;
+GO
 CREATE SCHEMA rls;
 GO
 
 -- User Table
 CREATE TABLE users (
-    id              CHAR(36)        NOT NULL,
+    id              CHAR(32)        NOT NULL,
     email           VARCHAR(320)    NOT NULL,
     name            VARCHAR(255)    NOT NULL,
     password_hash   VARCHAR(255),
@@ -13,9 +17,10 @@ CREATE TABLE users (
     CONSTRAINT pk_users         PRIMARY KEY (id),
     CONSTRAINT uq_users_email   UNIQUE      (email)
 );
+
 -- Tenants
 CREATE TABLE tenants (
-    id          CHAR(36)        NOT NULL,
+    id          CHAR(32)        NOT NULL,
     name        VARCHAR(255)    NOT NULL,
     created_at  DATETIME2       NOT NULL,
     updated_at  DATETIME2       NOT NULL,
@@ -25,9 +30,9 @@ CREATE TABLE tenants (
 
 -- Tenant Memberships
 CREATE TABLE tenant_memberships (
-    id          CHAR(36)    NOT NULL,
-    user_id     CHAR(36)    NOT NULL,
-    tenant_id   CHAR(36)    NOT NULL,
+    id          CHAR(32)    NOT NULL,
+    user_id     CHAR(32)    NOT NULL,
+    tenant_id   CHAR(32)    NOT NULL,
     joined_at   DATETIME2   NOT NULL,
 
     CONSTRAINT pk_tenant_memberships PRIMARY KEY (id),
@@ -40,9 +45,9 @@ CREATE TABLE tenant_memberships (
 
 -- Files
 CREATE TABLE files  (
-    id          CHAR(36)        NOT NULL,
-    tenant_id   CHAR(36)        NOT NULL,
-    owner_id    CHAR(36)        NOT NULL,
+    id          CHAR(32)        NOT NULL,
+    tenant_id   CHAR(32)        NOT NULL,
+    owner_id    CHAR(32)        NOT NULL,
     filename    VARCHAR(512)    NOT NULL,
     mime_type   VARCHAR(255)    NOT NULL,
     size_bytes  BIGINT          NOT NULL,
@@ -63,8 +68,8 @@ CREATE TABLE files  (
 
 -- File contents
 CREATE TABLE file_contents (
-    file_id             CHAR(36)       	NOT NULL,
-    tenant_id   	    CHAR(36)	    NOT NULL,
+    file_id             CHAR(32)       	NOT NULL,
+    tenant_id   	    CHAR(32)	    NOT NULL,
     ciphertext          VARBINARY(MAX) 	NOT NULL,
     nonce               VARBINARY(16)  	NOT NULL,
     auth_tag            VARBINARY(16)  	NOT NULL,
@@ -81,12 +86,12 @@ CREATE TABLE file_contents (
 GO
 
 -- RLS predicate function
-CREATE FUNCTION rls.fn_TenantAccessPredicate(@TenantId CHAR(36)) 
+CREATE FUNCTION rls.fn_TenantAccessPredicate(@TenantId CHAR(32)) 
 RETURNS TABLE 
 WITH SCHEMABINDING 
 AS 
 RETURN SELECT 1 AS AccessResult 
-WHERE @TenantId = CAST(SESSION_CONTEXT(N'TenantID') AS CHAR(36));
+WHERE @TenantId = CAST(SESSION_CONTEXT(N'TenantID') AS CHAR(32));
 GO
 
 -- Security Policy
@@ -115,11 +120,11 @@ AS
 BEGIN
     -- SQL_statements to be executed
     SET NOCOUNT ON;
-    DECLARE @TenantID CHAR(36) = CONVERT(CHAR(36), SESSION_CONTEXT(N'TenantID'));
-    DECLARE @MemberID CHAR(36) = CONVERT(CHAR(36), SESSION_CONTEXT(N'MemberID'));
+    DECLARE @TenantID CHAR(32) = CONVERT(CHAR(32), SESSION_CONTEXT(N'TenantID'));
+    DECLARE @MemberID CHAR(32) = CONVERT(CHAR(32), SESSION_CONTEXT(N'MemberID'));
     IF @TenantID IS NULL OR @MemberID IS NULL
         THROW 50001, 'FILES_CONTEXT_REQUIRED', 1;
-    DECLARE @FileID CHAR(36) = JSON_VALUE(@Payload, '$.fileId');
+    DECLARE @FileID CHAR(32) = JSON_VALUE(@Payload, '$.fileId');
 
     IF @Action = 'SELECT'
     BEGIN
@@ -140,7 +145,7 @@ BEGIN
 
     ELSE IF @Action = 'INSERT'
     BEGIN
-        SET @FileID = REPLACE(CONVERT(VARCHAR(36), NEWID()), '-', '');
+        SET @FileID = REPLACE(CONVERT(VARCHAR(32), NEWID()), '-', '');
         INSERT dbo.files (id, tenant_id, owner_id, filename, mime_type, size_bytes, storage_key, status, created_at, updated_at)
         VALUES (
             @FileID,
@@ -178,7 +183,7 @@ CREATE OR ALTER PROCEDURE dbo.files_Content_Put
     -- Params
     -- @param1 datatype,
     -- @param2 datatype
-    @FileID      CHAR(36),
+    @FileID      CHAR(32),
     @Ciphertext  VARBINARY(MAX),
     @Nonce       VARBINARY(16),
     @AuthTag     VARBINARY(16),
@@ -188,7 +193,7 @@ AS
 BEGIN
     -- SQL_statements to be executed
     SET NOCOUNT ON;
-    DECLARE @TenantID CHAR(36) = CONVERT(CHAR(36), SESSION_CONTEXT(N'TenantID'));
+    DECLARE @TenantID CHAR(32) = CONVERT(CHAR(32), SESSION_CONTEXT(N'TenantID'));
     IF @TenantID IS NULL
         THROW 50001, 'FILES_CONTEXT_REQUIRED', 1;
 
@@ -207,12 +212,12 @@ CREATE OR ALTER PROCEDURE dbo.files_Content_Get
     -- Params
     -- @param1 datatype,
     -- @param2 datatype
-    @FileID CHAR(36)
+    @FileID CHAR(32)
 AS
 BEGIN
     -- SQL_statements to be executed
     SET NOCOUNT ON;
-    DECLARE @TenantID CHAR(36) = CONVERT(CHAR(36), SESSION_CONTEXT(N'TenantID'));
+    DECLARE @TenantID CHAR(32) = CONVERT(CHAR(32), SESSION_CONTEXT(N'TenantID'));
     IF @TenantID IS NULL
         THROW 50001, 'FILES_CONTEXT_REQUIRED', 1;
 

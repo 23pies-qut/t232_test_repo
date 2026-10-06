@@ -1,5 +1,7 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { setUserContext } from './api/userContextApi';
+import { uploadFile } from './api/uploadFileApi';
+import { listFiles } from './api/getFilesListApi';
 
 import './App.css';
 
@@ -44,7 +46,7 @@ function App() {
                         </button>
                         <br />
 
-                        <p>Token = {token}</p>
+                        <p style={{ fontsize: '6px' }}>Token = {token}</p>
 
                         <input type="file" onChange={onFileChange} />
                         <br />
@@ -55,7 +57,8 @@ function App() {
                                 <p>Name: {selectedFile.name}</p>
                                 <p>Type: {selectedFile.type}</p>
                                 <p>Size: {selectedFile.size}bytes</p>
-                                <button onClick={null /*TODO: Upload to db*/} >Upload!</button>
+                                <p style={{fontsize: '6px'}}> {selectedFile.size}</p>
+                                <button onClick={uploadFile(selectedFile, token)} >Upload!</button>
                             </div>
                         ) : (
                             <p>No file selected.</p>

@@ -38,6 +38,5 @@ namespace MockModule.Server.Services
 
             return new JwtSecurityTokenHandler().WriteToken( token );
         }
-
     }
 }
