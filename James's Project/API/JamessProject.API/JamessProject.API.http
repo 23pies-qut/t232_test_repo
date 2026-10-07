@@ -1,0 +1,6 @@
+@JamessProject.API_HostAddress = http://localhost:5145
+
+GET {{JamessProject.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
