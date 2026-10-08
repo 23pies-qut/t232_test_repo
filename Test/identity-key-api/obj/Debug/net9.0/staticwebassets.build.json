@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "U49Rss3zyIx8lpsZelRFP1PDDQ6UncbzJzptfoJSFic=",
+  "Source": "identity-key-api",
+  "BasePath": "_content/identity-key-api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

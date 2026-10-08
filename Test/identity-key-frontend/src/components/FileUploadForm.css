@@ -1,0 +1,240 @@
+.file-upload-card {
+  margin-bottom: 22px;
+  padding: 26px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+}
+
+.file-upload-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.file-upload-title {
+  margin: 0;
+  color: #1f2937;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.file-upload-header-icon {
+  display: flex;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  color: #4f46e5;
+  background-color: #eef2ff;
+  border-radius: 9px;
+}
+
+.file-upload-header-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.file-upload-hidden-input {
+  display: none;
+}
+
+.file-upload-drop-zone {
+  display: flex;
+  min-height: 110px;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 20px;
+  background-color: #f8fafc;
+  border: 2px dashed #a5b4fc;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.file-upload-drop-zone:hover,
+.file-upload-drop-zone-active {
+  background-color: #eef2ff;
+  border-color: #4f46e5;
+}
+
+.file-upload-drop-icon {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  color: #4f46e5;
+  background-color: #eef2ff;
+  border-radius: 10px;
+}
+
+.file-upload-drop-icon svg {
+  width: 19px;
+  height: 19px;
+}
+
+.file-upload-drop-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.file-upload-drop-content strong {
+  color: #312e81;
+  font-size: 14px;
+}
+
+.file-upload-drop-content span {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.file-upload-drop-content small {
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+.file-upload-selection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+  padding: 14px;
+  background-color: #eef2ff;
+  border: 1px solid #c7d2fe;
+  border-radius: 10px;
+}
+
+.file-upload-selection-icon {
+  display: flex;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background-color: #4f46e5;
+  border-radius: 8px;
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.file-upload-selection-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.file-upload-selection-name {
+  overflow: hidden;
+  color: #3730a3;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.file-upload-selection-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  margin-top: 5px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.file-upload-remove-button {
+  display: flex;
+  width: 27px;
+  height: 27px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: #64748b;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 50%;
+  font-size: 17px;
+}
+
+.file-upload-error {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  padding: 11px 13px;
+  color: #991b1b;
+  background-color: #fee2e2;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.file-upload-error svg {
+  width: 15px;
+  height: 15px;
+}
+
+.file-upload-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 18px;
+}
+
+.file-upload-button {
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 20px;
+  color: #ffffff;
+  background-color: #4f46e5;
+  border: none;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.file-upload-button:hover:not(:disabled) {
+  background-color: #4338ca;
+}
+
+.file-upload-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.file-upload-button svg {
+  width: 15px;
+  height: 15px;
+}
+
+.file-upload-spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@media (max-width: 520px) {
+  .file-upload-card {
+    padding: 20px;
+  }
+
+  .file-upload-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .file-upload-button {
+    width: 100%;
+  }
+}
