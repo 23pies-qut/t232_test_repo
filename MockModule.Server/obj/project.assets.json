@@ -916,26 +916,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\23pie\\.nuget\\packages\\": {},
-    "C:\\Users\\23pie\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder": {},
+    "C:\\Users\\jimmy\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\23pie\\Documents\\2026 Sem 2\\IFB398 - IT Capstone\\t232_test_repo\\MockModule.Server\\MockModule.Server.csproj",
+      "projectUniqueName": "C:\\Users\\jimmy\\source\\repos\\t232_test_repo\\MockModule.Server\\MockModule.Server.csproj",
       "projectName": "MockModule.Server",
-      "projectPath": "C:\\Users\\23pie\\Documents\\2026 Sem 2\\IFB398 - IT Capstone\\t232_test_repo\\MockModule.Server\\MockModule.Server.csproj",
-      "packagesPath": "C:\\Users\\23pie\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\23pie\\Documents\\2026 Sem 2\\IFB398 - IT Capstone\\t232_test_repo\\MockModule.Server\\obj\\",
+      "projectPath": "C:\\Users\\jimmy\\source\\repos\\t232_test_repo\\MockModule.Server\\MockModule.Server.csproj",
+      "packagesPath": "C:\\Users\\jimmy\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jimmy\\source\\repos\\t232_test_repo\\MockModule.Server\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Users\\23pie\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder",
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\23pie\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Users\\23pie\\AppData\\Roaming\\NuGet\\config\\Godot.Offline.Config",
+        "C:\\Users\\jimmy\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -944,6 +941,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
