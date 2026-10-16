@@ -1,0 +1,590 @@
+/* ========================================
+   GENERAL PAGE STYLING
+   ======================================== */
+//i added a comment
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #f4f4f4;
+    color: #202020;
+}
+
+
+/* ========================================
+   MAIN FILE MODULE LAYOUT
+   ======================================== */
+
+.file-module {
+    display: flex;
+
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/* ========================================
+   SIDEBAR
+   ======================================== */
+
+.sidebar {
+    width: 320px;
+    min-height: 100vh;
+
+    background-color: #eeeeee;
+
+    border-right: 1px solid #b5b5b5;
+
+    flex-shrink: 0;
+}
+
+
+/* ========================================
+   MAIN RIGHT-HAND PANEL
+   ======================================== */
+
+.main-panel {
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+/* ========================================
+   SIDEBAR BRAND
+   ======================================== */
+
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    /* Match the height of the Main Panel top bar */
+    height: 100px;
+
+    /* Centre logo and text vertically */
+    padding: 0 15px;
+
+    position: relative;
+}
+
+.brand-icon {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.brand-title {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 27px;
+    font-weight: 600;
+
+    color: #202020;
+    text-decoration: none;
+}
+
+
+/* ========================================
+   SIDEBAR HEADER DIVIDER
+   ======================================== */
+
+.sidebar-brand::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+    left: 15px;
+    right: 15px;
+
+    height: 1px;
+
+    background-color: #202020;
+}
+
+
+/* ========================================
+   SIDEBAR NAVIGATION
+   ======================================== */
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 0;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    min-height: 55px;
+
+    padding: 8px 22px;
+
+    color: #202020;
+    text-decoration: none;
+
+    font-size: 20px;
+}
+
+.nav-item:hover {
+    background-color: #d5d5d5;
+}
+
+.nav-item.active {
+    background-color: #b9b9b9;
+}
+
+/* Sidebar navigation icons */
+.nav-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+
+/* ========================================
+   FOLDER SECTION
+   ======================================== */
+
+.folders-section {
+    margin-top: 15px;
+}
+
+.folders-section h2 {
+    margin: 0 0 8px 16px;
+
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.folder-item {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 5px 15px;
+
+    font-size: 19px;
+}
+
+.folder-item.nested {
+    padding-left: 48px;
+}
+
+.folder-item.nested-more {
+    padding-left: 80px;
+}
+
+
+/* ========================================
+   TOP BAR
+   ======================================== */
+
+.top-bar {
+    min-height: 100px;
+
+    border-bottom: 1px solid #202020;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    padding: 22px 28px;
+}
+
+
+/* ========================================
+   SEARCH BAR
+   ======================================== */
+
+.search-bar {
+    width: 55%;
+    min-height: 58px;
+
+    padding: 0 18px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    background-color: #eee9f2;
+
+    border-radius: 35px;
+
+    font-size: 20px;
+}
+
+.search-hint {
+    flex: 1;
+
+    color: #666666;
+}
+
+
+/* ========================================
+   TOP-RIGHT ACTIONS
+   ======================================== */
+
+/* Container for Help, Settings and Profile buttons */
+.top-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 0px;
+}
+
+/* Keep all three buttons the same size */
+.top-actions button {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: none;
+    background: none;
+
+    cursor: pointer;
+}
+
+/* Keep all three icons the same size */
+.top-action-icon {
+    width: 32px;
+    height: 32px;
+
+    object-fit: contain;
+    display: block;
+}
+
+
+/* ========================================
+   MAIN CONTENT
+   ======================================== */
+
+.content {
+    padding: 15px 18px 40px 18px;
+}
+
+
+/* ========================================
+   FILE UPLOAD AREA
+   ======================================== */
+
+.upload-area {
+    width: 100%;
+    min-height: 130px;
+
+    background-color: #202020;
+    color: white;
+
+    border-radius: 30px;
+
+    margin-bottom: 45px;
+}
+
+
+/* Hide the browser's normal file input */
+#fileInput {
+    display: none;
+}
+
+
+/*
+   This label fills the upload area.
+
+   Because it is connected to #fileInput in the HTML,
+   clicking anywhere on this label opens File Explorer.
+*/
+
+/* Centre the upload icon above the text */
+.upload-label {
+    width: 100%;
+    min-height: 180px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    cursor: pointer;
+}
+
+
+/* Upload icon */
+.upload-symbol {
+    width: 65px;
+    height: 65px;
+
+    object-fit: contain;
+    display: block;
+}
+
+
+/* Upload instruction */
+.upload-text {
+    text-align: center;
+
+    padding: 0 15px;
+
+    font-size: 21px;
+}
+
+/* ========================================
+   MY FILES SECTION
+   ======================================== */
+
+.files-section {
+    width: 100%;
+}
+
+
+/*
+   Places "My files" on the left
+   and the management buttons on the right.
+*/
+.files-toolbar {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    border-bottom: 4px solid #202020;
+
+    padding: 0 5px 5px 5px;
+}
+
+
+/* My files heading */
+.files-toolbar h2 {
+    margin: 0;
+
+    font-size: 25px;
+    font-weight: 600;
+}
+
+
+/* Container for delete/share/send/download */
+.file-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+/* Remove default button styling */
+.action-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+
+    padding: 0;
+
+    background: none;
+    border: none;
+
+    cursor: pointer;
+}
+
+
+/* SVG icons inside the action buttons */
+.action-icon {
+    width: 26px;
+    height: 26px;
+
+    object-fit: contain;
+    display: block;
+}
+
+
+/* Small visual response when hovering */
+.action-button:hover {
+    opacity: 0.6;
+}
+
+
+/* ========================================
+   FILE TABLE
+   ======================================== */
+
+.file-table {
+    width: 100%;
+}
+
+
+/*
+   Both the heading and each file use the
+   same five-column grid.
+
+   This keeps every column aligned.
+*/
+.file-table-header,
+.file-row {
+    display: grid;
+
+    grid-template-columns:
+        45px
+        minmax(220px, 2fr)
+        minmax(180px, 1.5fr)
+        minmax(90px, 0.7fr)
+        90px;
+
+    align-items: center;
+}
+
+
+/* Table heading */
+.file-table-header {
+    min-height: 42px;
+
+    background-color: #d0d0d0;
+
+    border-bottom: 4px solid #202020;
+
+    font-size: 18px;
+}
+
+
+/* Individual file row */
+.file-row {
+    min-height: 48px;
+
+    border-bottom: 1px solid #888;
+
+    font-size: 16px;
+}
+
+
+/* Give table cells a little breathing room */
+.file-table-header > div,
+.file-row > div {
+    padding: 7px 8px;
+}
+
+
+/* Checkbox column */
+.select-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Slightly enlarge the checkboxes */
+.file-checkbox,
+#selectAll {
+    width: 20px;
+    height: 20px;
+
+    cursor: pointer;
+}
+
+
+/* ========================================
+   FILE NAME AND ICON ALIGNMENT
+   ======================================== */
+
+/* Keep file icons and filenames on one line */
+.file-name {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+    min-width: 0;
+}
+
+/* Prevent filenames from wrapping */
+.file-name span {
+    white-space: nowrap;
+}
+
+
+/* ========================================
+   FILE TYPE SVG ICONS
+   ======================================== */
+
+/*
+   Controls the size of file-type icons
+   displayed beside uploaded filenames.
+*/
+.file-type-icon {
+    width: 24px;
+    height: 24px;
+
+    object-fit: contain;
+    flex-shrink: 0;
+
+    display: block;
+}
+
+
+/* File-type symbol */
+.file-type-symbol {
+    width: 28px;
+
+    text-align: center;
+
+    font-size: 24px;
+}
+
+
+/* Favourite marker */
+.favourite-icon {
+    width: 20px;
+    height: 20px;
+
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+
+/* Manage (...) button */
+.manage-button {
+    background: none;
+    border: none;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    padding: 0 5px;
+}
+
+
+.manage-button:hover {
+    opacity: 0.6;
+}
+
+
+/* Folder icons in the sidebar */
+.folder-icon {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
