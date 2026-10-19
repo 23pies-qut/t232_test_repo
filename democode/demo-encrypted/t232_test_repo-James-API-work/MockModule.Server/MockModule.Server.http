@@ -1,0 +1,18 @@
+@MockModule.Server_HostAddress = http://localhost:5228
+
+GET {{MockModule.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+POST http://localhost:5000/api/UserContext/set-user
+Content-Type: application/json
+
+{
+  "userName": "Andy"
+}
+
+###
+
+GET http://localhost:5000/api/GetFilesList
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZW5hbnRfaWQiOiIwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMSIsIm1lbWJlcl9pZCI6IjAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAxIiwicGVybWlzc2lvbnMiOlsiZmlsZXMucmVhZCIsImZpbGVzLndyaXRlIl0sIm5iZiI6MTc5MjE2MTEwNSwiZXhwIjoxNzkyMTY4MzA1LCJpc3MiOiJtb2NrbW9kdWxlLXRlc3QiLCJhdWQiOiJtb2NrbW9kdWxlLWZpbGV3aWRnZXQifQ.XL8Rru1RtcI6MKTGOrAvYNoSY_FlxFkU8DVw_q4hRYE
+Accept: application/json

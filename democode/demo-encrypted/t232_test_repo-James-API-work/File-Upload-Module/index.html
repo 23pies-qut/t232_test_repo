@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Files</title>
+
+    <!-- Connect the V2 stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Entire File Module interface -->
+    <div class="file-module">
+
+        
+        <!------------------------------------------
+        LEFT-HAND NAVIGATION
+        ------------------------------------------->
+        <aside class="sidebar">
+
+            <!-- File Management header -->
+            <div class="sidebar-brand">
+
+                <a href="#" class="brand-title">
+
+                    <img
+                        src="assets/icons/file-upload.svg"
+                        alt=""
+                        class="brand-icon"
+                    >
+
+                    <span>File Management</span>
+
+                </a>
+
+            </div>
+
+            <!-- Main sidebar navigation -->
+            <nav class="sidebar-nav">
+                <!-- All Fiele navigation -->
+                <a href="#" class="nav-item active">
+                    <img
+                        src="assets/icons/file.svg"
+                        alt=""
+                        class="nav-icon"
+                    >
+                    <span>All Files</span>
+                </a>
+
+                <!-- Recent Uploads navigation -->
+                <a href="#" class="nav-item">
+                    <img
+                        src="assets/icons/recent-uploads.svg"
+                        alt=""
+                        class="nav-icon"
+                    >
+                    <span>Recent Uploads</span>
+                </a>
+
+                <!-- Shared Files navigation -->
+                <a href="#" class="nav-item">
+                    <img
+                        src="assets/icons/share.svg"
+                        alt=""
+                        class="nav-icon"
+                    >
+                    <span>Shared Files</span>
+                </a>
+
+                <!-- Deleted Files navigation -->
+                <a href="#" class="nav-item">
+                    <img
+                        src="assets/icons/trash.svg"
+                        alt=""
+                        class="nav-icon"
+                    >
+                    <span>Deleted</span>
+                </a>
+
+                <!-- Favourites Files navigation -->
+                <a href="#" class="nav-item">
+                    <img
+                        src="assets/icons/favourites.svg"
+                        alt=""
+                        class="nav-icon"
+                    >
+                    <span>Favourites</span>
+                </a>
+
+                <!-- ID navigation -->
+                <a href="#" class="nav-item">
+                    <img
+                        src="assets/icons/id.svg"
+                        alt=""
+                        class="nav-icon"
+                    >
+                    <span>ID</span>
+                </a>
+
+            </nav>
+
+
+            <!-- Folder navigation -->
+            <section class="folders-section">
+
+                <h2>FOLDERS</h2>
+
+                <div class="folder-tree">
+
+                    <!-- Main Docs folder -->
+                    <div class="folder-item">
+                        <span>⌄</span>
+
+                        <img
+                            src="assets/icons/folder.svg"
+                            alt=""
+                            class="folder-icon"
+                        >
+
+                        <span>Docs</span>
+                    </div>
+
+                    <!-- Currently selected folder -->
+                    <div class="folder-item nested active-folder">
+                        <img
+                            src="assets/icons/folder.svg"
+                            alt=""
+                            class="folder-icon"
+                        >
+                        <span>My Files</span>
+                    </div>
+
+                    <!-- Sub folder -->
+                    <div class="folder-item nested">
+                        <img
+                            src="assets/icons/folder.svg"
+                            alt=""
+                            class="folder-icon"
+                        >
+                        <span>Sub</span>
+                    </div>
+
+                    <!-- Intake folder -->
+                    <div class="folder-item nested">
+                        <img
+                            src="assets/icons/folder.svg"
+                            alt=""
+                            class="folder-icon"
+                        >
+                        <span>Intake</span>
+                    </div>
+
+                    <!-- Clients folder -->
+                    <div class="folder-item nested">
+                        <span>⌄</span>
+
+                        <img
+                            src="assets/icons/folder.svg"
+                            alt=""
+                            class="folder-icon"
+                        >
+
+                        <span>Clients</span>
+                    </div>
+
+                    <!-- Andrew Client folder -->
+                    <div class="folder-item nested-more">
+                        <img
+                            src="assets/icons/folder.svg"
+                            alt=""
+                            class="folder-icon"
+                        >
+                        <span>Andrew A</span>
+                    </div>
+
+                    <!-- Videos folder -->
+                    <div class="folder-item">
+                        <span>⌄</span>
+
+                        <img
+                            src="assets/icons/folder.svg"
+                            alt=""
+                            class="folder-icon"
+                        >
+
+                        <span>Videos</span>
+                    </div>
+
+                    <!-- Cute Cats folder -->
+                    <div class="folder-item nested">
+                        <img
+                            src="assets/icons/folder.svg"
+                            alt=""
+                            class="folder-icon"
+                        >
+                        <span>Cute Cats</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </aside>
+
+
+        <!------------------------------------------
+        MAIN PANEL, RIGHT HAND SIDE OF SCREEN
+        ------------------------------------------->
+        <div class="main-panel">
+
+            <!-- Top toolbar -->
+            <header class="top-bar">
+
+                <div class="search-bar">
+                    <span>☰</span>
+                    <span class="search-hint">Hinted search text</span>
+                    <span>⌕</span>
+                </div>
+
+                <div class="top-actions">
+                    <button type="button" aria-label="Settings">
+                        <img src="assets/icons/help-circle.svg"
+                             alt=""
+                             class="top-action-icon">
+                    </button>
+
+                    <button type="button" aria-label="Settings">
+                        <img src="assets/icons/settings.svg"
+                             alt=""
+                             class="top-action-icon">
+                    </button>
+
+                    <!--Account nagivation-->
+                    <div class="account-switcher">
+
+                        <button type="button"
+                                id="accountButton"
+                                aria-label="Switch account"
+                                aria-expanded="false"
+                                aria-controls="accountDropdown">
+                            <img src="assets/icons/profile.svg"
+                                 alt=""
+                                 class="top-action-icon">
+                        </button>
+
+                        <div id="accountDropdown" class="account-dropdown" hidden>
+
+                            <div class="account-dropdown-title">
+                                Switch account
+                            </div>
+
+                            <button type="button" class="account-option" data-username="Andy">
+                                <span>Andy</span>
+                                <span class="account-check" aria-hidden="true">✓</span>
+                            </button>
+
+                            <button type="button" class="account-option" data-username="Bob">
+                                <span>Bob</span>
+                                <span class="account-check" aria-hidden="true" hidden>✓</span>
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </header>
+
+
+            <!-- Main file-management content -->
+            <main class="content">
+
+                <!-- File upload area -->
+                <section class="upload-area">
+
+                    <!--
+        The real file input is hidden with CSS.
+        Clicking the label below activates this input.
+    -->
+                    <input type="file"
+                           id="fileInput"
+                           accept=".jpg,.jpeg,.png,.gif,.webp,.mp4,.mov,.avi,.mp3,.wav,.ogg,.pdf,.txt,.doc,.docx,.obj"
+                           multiple>
+
+                    <!--
+        Because "for" matches the input ID above,
+        clicking this area opens the computer's file explorer.
+    -->
+                    <label for="fileInput" class="upload-label">
+
+                        <img src="assets/icons/upload.svg"
+                             alt=""
+                             class="upload-symbol">
+
+                        <span class="upload-text">
+                            Drag and drop or click to upload
+                        </span>
+
+                    </label>
+                    <p id="uploadStatus" role="status" aria-live="polite"></p>
+
+                </section>
+
+
+                <!-- MY FILES TOOLBAR -->
+
+                <section class="files-section">
+
+                    <div class="files-toolbar">
+
+                        <!-- Section title -->
+                        <h2>All files</h2>
+
+                        <!-- File management actions -->
+                        <div class="file-actions">
+
+                            <!-- Delete selected files -->
+                            <button class="action-button" id="deleteButton"
+                                    type="button" title="Delete selected files">
+                                <img src="assets/icons/trash.svg"
+                                    alt="Delete" class="action-icon">
+                            </button>
+
+                            <!-- Share selected files -->
+                            <button class="action-button" id="shareButton"
+                                    type="button" title="Share selected files">
+                                <img src="assets/icons/share.svg"
+                                    alt="Share" class="action-icon">
+                            </button>
+
+                            <!-- Send selected files -->
+                            <button class="action-button" id="sendButton"
+                                    type="button" title="Send selected files">
+                                <img src="assets/icons/send.svg"
+                                    alt="Send" class="action-icon">
+                            </button>
+
+                            <!-- Download selected files -->
+                            <button class="action-button" id="downloadButton"
+                                    type="button" title="Download selected files">
+                                <img src="assets/icons/download.svg"
+                                    alt="Download" class="action-icon">
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!------------------------------------------
+                    UPLOADED FILE TABLE
+                    ------------------------------------------->
+                    <div class="file-table">
+
+                        <!-- Table headings -->
+                        <div class="file-table-header">
+
+                            <div class="select-column">
+                                <input
+                                    type="checkbox"
+                                    id="selectAll"
+                                    aria-label="Select all files"
+                                >
+                            </div>
+
+                            <div class="name-column">
+                                Name
+                            </div>
+
+                            <div class="modified-column">
+                                Last modified
+                            </div>
+
+                            <div class="size-column">
+                                Size
+                            </div>
+
+                            <div class="manage-column">
+                                Manage
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </main>
+
+        </div>
+
+    </div>
+
+
+    <!-- Connect JavaScript -->
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
