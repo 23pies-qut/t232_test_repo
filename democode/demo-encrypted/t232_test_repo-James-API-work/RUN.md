@@ -48,6 +48,5 @@ returns `FILE_DECRYPTION_FAILED`. That is expected.
 
 `MockModule.Server/appsettings.Development.json` contains a development KEK
 (`Encryption:KeyEncryptionKey`) and JWT signing key (`MockModuleSecurity:SigningKeyBase64`)
-so the team can run the demo without setup. Never use them in production: deploy with a new
-KEK in the `IDENTITY_KEY_KEK` environment variable, which overrides the config value.
+so the team can run the demo without setup. 
 Everyone sharing one database must use the same KEK, or they cannot decrypt each other's files.
