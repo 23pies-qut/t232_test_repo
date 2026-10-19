@@ -513,6 +513,7 @@ body {
 .file-name {
     display: flex;
     align-items: center;
+    overflow: hidden;
 
     gap: 10px;
     min-width: 0;
@@ -587,4 +588,100 @@ body {
     width: 22px;
     height: 22px;
     object-fit: contain;
+}
+
+/* ========================================
+   ACCOUNT SWITCHER
+   ======================================== */
+
+.account-switcher {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+#accountButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* Dropdown container */
+.account-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    width: 280px;
+    min-width: 280px;
+    padding: 8px;
+    box-sizing: border-box;
+    background: #ffffff;
+    color: #222222;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+}
+
+.account-dropdown[hidden] {
+    display: none !important;
+}
+
+.account-dropdown-title {
+    padding: 10px 12px;
+    margin-bottom: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #666666;
+}
+
+/* Each option fills the dropdown's inner width */
+.account-option {
+    display: block;
+    position: relative;
+    width: 100% !important;
+    min-height: 42px;
+    padding: 10px 36px 10px 12px;
+    box-sizing: border-box;
+    color: #222222;
+    background: #ffffff;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    text-align: left !important;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.account-option > span:first-child {
+    display: block;
+    width: 100%;
+    text-align: left !important;
+    padding-left: 5px;
+    }
+
+/* Restore the hover animation */
+.account-option:hover {
+    background-color: #eeeeee;
+    border-color: #000000;
+}
+
+/* Keep the tick on the far right */
+.account-check {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #222222;
+    font-weight: bold;
+}
+
+.account-check[hidden] {
+    display: none !important;
 }

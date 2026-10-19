@@ -1,2 +1,0 @@
-C:\Users\23pie\Documents\2026 Sem 2\IFB398 - IT Capstone\MockModule\mockmodule.client\obj\Debug\mockmodule.client.esproj.CoreCompileInputs.cache
-C:\Users\23pie\Documents\2026 Sem 2\IFB398 - IT Capstone\t232_test_repo\mockmodule.client\obj\Debug\mockmodule.client.esproj.CoreCompileInputs.cache

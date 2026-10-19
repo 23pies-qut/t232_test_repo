@@ -223,28 +223,49 @@
 
                 <div class="top-actions">
                     <button type="button" aria-label="Settings">
-                        <img
-                            src="assets/icons/help-circle.svg"
-                            alt=""
-                            class="top-action-icon"
-                        >
+                        <img src="assets/icons/help-circle.svg"
+                             alt=""
+                             class="top-action-icon">
                     </button>
 
                     <button type="button" aria-label="Settings">
-                        <img
-                            src="assets/icons/settings.svg"
-                            alt=""
-                            class="top-action-icon"
-                        >
+                        <img src="assets/icons/settings.svg"
+                             alt=""
+                             class="top-action-icon">
                     </button>
 
-                    <button type="button" aria-label="Settings">
-                        <img
-                            src="assets/icons/profile.svg"
-                            alt=""
-                            class="top-action-icon"
-                        >
-                    </button>
+                    <!--Account nagivation-->
+                    <div class="account-switcher">
+
+                        <button type="button"
+                                id="accountButton"
+                                aria-label="Switch account"
+                                aria-expanded="false"
+                                aria-controls="accountDropdown">
+                            <img src="assets/icons/profile.svg"
+                                 alt=""
+                                 class="top-action-icon">
+                        </button>
+
+                        <div id="accountDropdown" class="account-dropdown" hidden>
+
+                            <div class="account-dropdown-title">
+                                Switch account
+                            </div>
+
+                            <button type="button" class="account-option" data-username="Andy">
+                                <span>Andy</span>
+                                <span class="account-check" aria-hidden="true">✓</span>
+                            </button>
+
+                            <button type="button" class="account-option" data-username="Bob">
+                                <span>Bob</span>
+                                <span class="account-check" aria-hidden="true" hidden>✓</span>
+                            </button>
+
+                        </div>
+
+                    </div>
                 </div>
 
             </header>
@@ -257,33 +278,30 @@
                 <section class="upload-area">
 
                     <!--
-                        The real file input is hidden with CSS.
-                        Clicking the label below activates this input.
-                    -->
-                    <input
-                        type="file"
-                        id="fileInput"
-                        accept=".jpg,.jpeg,.png,.gif,.webp,.mp4,.mov,.avi,.mp3,.wav,.ogg,.pdf,.txt,.doc,.docx,.obj"
-                        multiple
-                    >
+        The real file input is hidden with CSS.
+        Clicking the label below activates this input.
+    -->
+                    <input type="file"
+                           id="fileInput"
+                           accept=".jpg,.jpeg,.png,.gif,.webp,.mp4,.mov,.avi,.mp3,.wav,.ogg,.pdf,.txt,.doc,.docx,.obj"
+                           multiple>
 
                     <!--
-                        Because "for" matches the input ID above,
-                        clicking this area opens the computer's file explorer.
-                    -->
+        Because "for" matches the input ID above,
+        clicking this area opens the computer's file explorer.
+    -->
                     <label for="fileInput" class="upload-label">
 
-                        <img
-                            src="assets/icons/upload.svg"
-                            alt=""
-                            class="upload-symbol"
-                        >
+                        <img src="assets/icons/upload.svg"
+                             alt=""
+                             class="upload-symbol">
 
                         <span class="upload-text">
                             Drag and drop or click to upload
                         </span>
 
                     </label>
+                    <p id="uploadStatus" role="status" aria-live="polite"></p>
 
                 </section>
 
@@ -363,176 +381,6 @@
 
                             <div class="manage-column">
                                 Manage
-                            </div>
-
-                        </div>
-
-
-                        <!-- File 1 -->
-                        <div class="file-row">
-
-                            <div class="select-column">
-                                <input type="checkbox" class="file-checkbox">
-                            </div>
-
-                            <div class="name-column file-name">
-
-                                <!-- File type icon -->
-                                <img src="assets/icons/image-file.svg"
-                                    alt=""
-                                    class="file-type-icon">
-
-                                <!-- File name -->
-                                <span>Photo01.jpg</span>
-
-                                <!-- Selected favourite icon -->
-                                <img src="assets/icons/selected-favourite.svg"
-                                    alt="Favourite"
-                                    class="favourite-icon">
-                            </div>
-
-                            <div class="modified-column">
-                                14/09/2026 1:09am
-                            </div>
-
-                            <div class="size-column">
-                                762 KB
-                            </div>
-
-                            <div class="manage-column">
-                                <button class="manage-button" type="button">•••</button>
-                            </div>
-
-                        </div>
-
-
-                        <!-- File 2 -->
-                        <div class="file-row">
-
-                            <div class="select-column">
-                                <input type="checkbox" class="file-checkbox">
-                            </div>
-
-                            <div class="name-column file-name">
-
-                                <!-- File type icon -->
-                                <img src="assets/icons/music-file.svg"
-                                    alt=""
-                                    class="file-type-icon">
-
-                                <!-- File name -->
-                                <span>CoolSong.mp3</span>
-                            </div>
-
-                            <div class="modified-column">
-                                14/09/2026 1:01am
-                            </div>
-
-                            <div class="size-column">
-                                12 MB
-                            </div>
-
-                            <div class="manage-column">
-                                <button class="manage-button" type="button">•••</button>
-                            </div>
-
-                        </div>
-
-
-                        <!-- File 3 -->
-                        <div class="file-row">
-
-                            <div class="select-column">
-                                <input type="checkbox" class="file-checkbox">
-                            </div>
-
-                            <div class="name-column file-name">
-
-                                    <!-- File type icon -->
-                                    <img src="assets/icons/video-file.svg" 
-                                    alt=""
-                                    class="file-type-symbol">
-
-                                <!-- File name -->
-                                <span>BigRampJumps.mp4</span>
-                            </div>
-
-                            <div class="modified-column">
-                                13/09/2026 8:09pm
-                            </div>
-
-                            <div class="size-column">
-                                4.1 GB
-                            </div>
-
-                            <div class="manage-column">
-                                <button class="manage-button" type="button">•••</button>
-                            </div>
-
-                        </div>
-
-
-                        <!-- File 4 -->
-                        <div class="file-row">
-
-                            <div class="select-column">
-                                <input type="checkbox" class="file-checkbox">
-                            </div>
-
-                            <div class="name-column file-name">
-
-                                    <!-- File type icon -->
-                                    <img src="assets/icons/doc-file.svg"
-                                    alt=""
-                                    class="file-type-symbol">
-
-                                <!-- File name -->
-                                <span>Coconuts Are Cool.docx</span>
-                            </div>
-
-                            <div class="modified-column">
-                                13/09/2026 6:19pm
-                            </div>
-
-                            <div class="size-column">
-                                16 MB
-                            </div>
-
-                            <div class="manage-column">
-                                <button class="manage-button" type="button">•••</button>
-                            </div>
-
-                        </div>
-
-
-                        <!-- File 5 -->
-                        <div class="file-row">
-
-                            <div class="select-column">
-                                <input type="checkbox" class="file-checkbox">
-                            </div>
-
-                            <div class="name-column file-name">
-
-                                    <!-- File type icon -->
-                                    <img src="assets/icons/file.svg"
-                                    alt=""
-                                    class="file-type-symbol">
-
-                                <!-- File name -->
-                                <span>CoolCoconut.obj</span>
-                            </div>
-
-                            <div class="modified-column">
-                                13/09/2026 6:15pm
-                            </div>
-
-                            <div class="size-column">
-                                1.7 GB
-                            </div>
-
-                            <div class="manage-column">
-                                <button class="manage-button" type="button">•••</button>
                             </div>
 
                         </div>

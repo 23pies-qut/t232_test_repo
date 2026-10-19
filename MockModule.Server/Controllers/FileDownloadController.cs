@@ -23,7 +23,7 @@ namespace MockModule.Server.Controllers
         }
 
         [HttpGet("{fileId}/download")]
-        public async Task<IActionResult> GetFileContentAsync(string fileId, string tenantId, string memberId)
+        public async Task<IActionResult> GetFileContentAsync(string fileId)
         {
             var scope = await _scopeReader.ReadAsync(Request);
 
@@ -54,9 +54,10 @@ namespace MockModule.Server.Controllers
                 return NotFound(new { code = "FILE_NOT_FOUND" });
             }
 
-            // Decryption code goes here. For demonstration purposes, we will just return the ciphertext as plaintext.
-            return File(plaintextBytes, "application/octet-stream", file.FileName);
-
+            // TODO: Decrypt the file content before returning the download.
+            // Return the stored file content as a download.
+            // Encryption/decryption is intentionally out of scope for now.
+            return File(file.Ciphertext, "image/jpeg", file.FileName);
         }
     }
 }

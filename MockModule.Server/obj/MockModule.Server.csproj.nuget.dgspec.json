@@ -61,10 +61,6 @@
               "target": "Package",
               "version": "[10.0.12, )"
             },
-            "Microsoft.AspNetCore.SpaProxy": {
-              "target": "Package",
-              "version": "[10.*-*, )"
-            },
             "Microsoft.Data.SqlClient": {
               "target": "Package",
               "version": "[7.1.1, )"

@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MockModule.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7c5fff137af983ddaff100149163c2ab78d02e57")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fac07bf39d2ab1502840c2594d232110d5a0ccc1")]
 [assembly: System.Reflection.AssemblyProductAttribute("MockModule.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MockModule.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

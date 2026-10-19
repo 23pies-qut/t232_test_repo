@@ -1,12 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "4fMEDi4mxVM=",
+  "dgSpecHash": "qMjwXC3KPTo=",
   "success": true,
   "projectFilePath": "C:\\Users\\jimmy\\source\\repos\\t232_test_repo\\MockModule.Server\\MockModule.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jimmy\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\10.0.12\\microsoft.aspnetcore.authentication.jwtbearer.10.0.12.nupkg.sha512",
     "C:\\Users\\jimmy\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.12\\microsoft.aspnetcore.openapi.10.0.12.nupkg.sha512",
-    "C:\\Users\\jimmy\\.nuget\\packages\\microsoft.aspnetcore.spaproxy\\10.0.12\\microsoft.aspnetcore.spaproxy.10.0.12.nupkg.sha512",
     "C:\\Users\\jimmy\\.nuget\\packages\\microsoft.bcl.cryptography\\10.0.2\\microsoft.bcl.cryptography.10.0.2.nupkg.sha512",
     "C:\\Users\\jimmy\\.nuget\\packages\\microsoft.data.sqlclient\\7.1.1\\microsoft.data.sqlclient.7.1.1.nupkg.sha512",
     "C:\\Users\\jimmy\\.nuget\\packages\\microsoft.data.sqlclient.extensions.abstractions\\7.1.1\\microsoft.data.sqlclient.extensions.abstractions.7.1.1.nupkg.sha512",
@@ -25,5 +24,30 @@
     "C:\\Users\\jimmy\\.nuget\\packages\\system.security.cryptography.pkcs\\9.0.18\\system.security.cryptography.pkcs.9.0.18.nupkg.sha512",
     "C:\\Users\\jimmy\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.18\\system.security.cryptography.protecteddata.9.0.18.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "message": "Package 'System.Security.Cryptography.Pkcs' 9.0.18 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-2fmv-rv2c-59x7",
+      "projectPath": "C:\\Users\\jimmy\\source\\repos\\t232_test_repo\\MockModule.Server\\MockModule.Server.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\jimmy\\source\\repos\\t232_test_repo\\MockModule.Server\\MockModule.Server.csproj",
+      "libraryId": "System.Security.Cryptography.Pkcs",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'System.Security.Cryptography.Pkcs' 9.0.18 has a known high severity vulnerability, https://github.com/advisories/GHSA-846f-f764-76mx",
+      "projectPath": "C:\\Users\\jimmy\\source\\repos\\t232_test_repo\\MockModule.Server\\MockModule.Server.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\jimmy\\source\\repos\\t232_test_repo\\MockModule.Server\\MockModule.Server.csproj",
+      "libraryId": "System.Security.Cryptography.Pkcs",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
 }

@@ -35,6 +35,11 @@ namespace MockModule.Server.Controllers
         {
             var standalone = _environment.IsDevelopment() &&
                 string.Equals(_configuration["MockModuleStandalone:Enabled"], "true", StringComparison.OrdinalIgnoreCase);
+           
+            Console.WriteLine("Standalone enabled: " +
+                _configuration["MockModuleStandalone:Enabled"]);
+            Console.WriteLine("Is Development: " + _environment.IsDevelopment());
+
             if (!standalone) return NotFound();
 
             if (!TestUsers.TryGetValue(request.UserName, out var user))

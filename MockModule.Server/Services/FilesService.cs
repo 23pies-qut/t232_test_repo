@@ -14,6 +14,10 @@ namespace MockModule.Server.Services
         {
             await using var db = new SqlConnection(_connectionString);
             await db.OpenAsync();
+            
+            Console.WriteLine($"Connected SQL Server: {db.DataSource}");
+            Console.WriteLine($"Connected database: {db.Database}");
+
             await SetSessionContextAsync(db, tenantId, memberId);
 
             await using var cmd = new SqlCommand("dbo.files_CRUD_JSON", db) { CommandType = CommandType.StoredProcedure };
@@ -22,30 +26,97 @@ namespace MockModule.Server.Services
             return (await cmd.ExecuteScalarAsync())?.ToString() ?? "[]";
         }
 
-        public async Task<FileDownload?> GetFileContentAsync(string fileId, string tenantId, string memberId)
+        public async Task<string> CreateFileAsync(
+            string fileName,
+            string mimeType,
+            long sizeBytes,
+            string tenantId,
+            string memberId)
         {
             await using var db = new SqlConnection(_connectionString);
             await db.OpenAsync();
+
             await SetSessionContextAsync(db, tenantId, memberId);
 
-            await using var cmd = new SqlCommand("dbo.files_CRUD_JSON", db) { CommandType = CommandType.StoredProcedure };
-            cmd.Parameters.AddWithValue("@FileId", fileId);
+            await using var cmd = new SqlCommand(
+                "dbo.files_CRUD_JSON",
+                db)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+
+            cmd.Parameters.AddWithValue("@Action", "INSERT");
+
+            cmd.Parameters.AddWithValue(
+                "@Payload",
+                $@"{{
+                    ""filename"": ""{fileName}"",
+                    ""mimeType"": ""{mimeType}"",
+                    ""sizeBytes"": {sizeBytes}
+        }}");
+
+            return (await cmd.ExecuteScalarAsync())?.ToString() ?? "{}";
+        }
+
+        public async Task SaveFileContentAsync(
+            string fileId,
+            byte[] fileBytes,
+            string tenantId,
+            string memberId)
+        {
+            await using var db = new SqlConnection(_connectionString);
+            await db.OpenAsync();
+
+            await SetSessionContextAsync(db, tenantId, memberId);
+
+            await using var cmd = new SqlCommand("dbo.files_Content_Put", db)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+
+            cmd.Parameters.Add("@FileID", SqlDbType.Char, 32).Value = fileId;
+            cmd.Parameters.Add("@Ciphertext", SqlDbType.VarBinary, -1).Value = fileBytes;
+            cmd.Parameters.Add("@Nonce", SqlDbType.VarBinary, 16).Value = new byte[16];
+            cmd.Parameters.Add("@AuthTag", SqlDbType.VarBinary, 16).Value = new byte[16];
+            cmd.Parameters.Add("@WrappedDek", SqlDbType.VarBinary, 512).Value = new byte[1];
+            cmd.Parameters.Add("@Checksum", SqlDbType.VarChar, 128).Value = "ENCRYPTION_SKIPPED";
+
+            await cmd.ExecuteNonQueryAsync();
+        }
+
+        public async Task<FileDownload?> GetFileContentAsync(
+             string fileId,
+             string tenantId,
+             string memberId)
+        {
+            await using var db = new SqlConnection(_connectionString);
+            await db.OpenAsync();
+
+            await SetSessionContextAsync(db, tenantId, memberId);
+
+            await using var cmd = new SqlCommand(
+                "dbo.files_GetContent", db)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+
+            cmd.Parameters.Add("@FileId", SqlDbType.Char, 32).Value = fileId;
+
             await using var reader = await cmd.ExecuteReaderAsync();
 
             if (!await reader.ReadAsync())
-            {
                 return null;
-            }
+
             return new FileDownload
             {
                 Ciphertext = (byte[])reader["ciphertext"],
                 Nonce = (byte[])reader["nonce"],
                 AuthTag = (byte[])reader["auth_tag"],
                 WrappedDek = (byte[])reader["wrapped_dek"],
-                PlaintextChecksum = reader["plaintext_checksum"].ToString()!,
+                PlaintextChecksum =
+                    reader["plaintext_checksum"].ToString()!,
                 FileName = reader["filename"].ToString()!
             };
-
         }
 
         public async Task<string> DeleteFileAsync(
