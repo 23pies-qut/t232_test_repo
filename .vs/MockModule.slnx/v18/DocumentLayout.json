@@ -75,8 +75,7 @@
               "ViewState": "AgIAAB0AAAAAAAAAAAAQwBEAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
               "WhenOpened": "2026-09-25T05:48:58.923Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -96,8 +95,7 @@
               "RelativeToolTip": "MockModule.Server\\Controllers\\UploadFilesController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-01T02:58:50.87Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-01T02:58:50.87Z"
             },
             {
               "$type": "Document",
@@ -109,8 +107,7 @@
               "RelativeToolTip": "MockModule.Server\\Models\\FileScope.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-04T12:20:49.499Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-04T12:20:49.499Z"
             },
             {
               "$type": "Document",
@@ -122,8 +119,7 @@
               "RelativeToolTip": "MockModule.Server\\Services\\FilesService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-04T13:06:10.152Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-04T13:06:10.152Z"
             },
             {
               "$type": "Document",
@@ -135,8 +131,7 @@
               "RelativeToolTip": "MockModule.Server\\Services\\ScopeReaderService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-04T12:23:39.231Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-04T12:23:39.231Z"
             },
             {
               "$type": "Document",
@@ -161,8 +156,7 @@
               "RelativeToolTip": "MockModule.Server\\Controllers\\UserContextController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-04T11:03:40.472Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-04T11:03:40.472Z"
             },
             {
               "$type": "Document",
@@ -174,8 +168,7 @@
               "RelativeToolTip": "MockModule.Server\\Controllers\\GetFilesListController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-04T13:26:30.343Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-04T13:26:30.343Z"
             },
             {
               "$type": "Document",
@@ -187,8 +180,7 @@
               "RelativeToolTip": "MockModule.Server\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-04T11:52:19.74Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-04T11:52:19.74Z"
             },
             {
               "$type": "Document",
@@ -200,8 +192,7 @@
               "RelativeToolTip": "mockmodule.client\\src\\api\\uploadFileApi.jsx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-10-02T07:57:10.77Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-02T07:57:10.77Z"
             },
             {
               "$type": "Document",
